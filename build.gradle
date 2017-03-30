@@ -18,3 +18,12 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
     compile 'org.springframework.boot:spring-boot-maven-plugin:1.2.3.RELEASE' //test
 }
+
+jar {
+    manifest {
+        attributes(
+                'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+                'Main-Class': 'com.teammartin.giflib.AppConfig'
+        )
+    }
+}
