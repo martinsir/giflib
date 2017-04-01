@@ -12,7 +12,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-
 @Component
 public class GifRepository {
     private static final List<Gif> ALL_GIFS = Arrays.asList(
@@ -46,5 +45,4 @@ public class GifRepository {
         }
         return gifs;
     }
-
 }

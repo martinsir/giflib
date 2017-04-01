@@ -27,3 +27,6 @@ jar {
         )
     }
 }
+springBoot {
+    executable = true
+}
