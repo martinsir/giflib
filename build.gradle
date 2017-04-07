@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-   // id 'war'
+    id 'war'
     id 'eclipse'
     id 'idea'
     id 'org.springframework.boot' version '1.5.2.RELEASE'
@@ -11,12 +11,10 @@ version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
-//war {
-//    baseName = 'giflib'
-//    version =  '0.5.0'
-//}
-
-
+war {
+    baseName = 'giflib'
+    version =  '001'
+}
 
 repositories {
     mavenCentral()
@@ -26,20 +24,20 @@ repositories {
 
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
-    compile("org.springframework.boot:spring-boot-starter-web")
-    //providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
     compile 'org.springframework.boot:spring-boot-maven-plugin:1.2.3.RELEASE' //test
 }
 
-jar {
-    manifest {
-        attributes(
-                'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
-                'Main-Class': 'com.teammartin.giflib.AppConfig'
-        )
-    }
-}
-
-//springBoot {
-//    executable = true
+//jar {
+//    manifest {
+//        attributes(
+//                'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+//                'Main-Class': 'com.teammartin.giflib.AppConfig'
+//        )
+//    }
 //}
+
+springBoot {
+    executable = true
+}
