@@ -5,6 +5,7 @@ import com.teammartin.giflib.model.Gif;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -13,6 +14,7 @@ import java.util.List;
 /**
  * Created by Martin H on 24-03-2017.
  */
+
 @Controller
 public class GifController {
     @Autowired
